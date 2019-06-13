@@ -1,0 +1,11 @@
+<br><br>
+
+<div>
+  List of available planets: <br><br>
+  <ul>
+    <li *ngFor="let planet of planets">{{ planet.name }} (id:{{ planet.id }})<br>
+      Solar year (period of orbit around the sun) is {{ planet.orbitalPeriodSolar }} Earth days.<br>
+      Day (period of rotation around its axis) is {{ planet.orbitalPeriodAxis }} Earth days.<br><br>
+    </li>
+  </ul>
+</div>
