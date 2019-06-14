@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlanetListComponent } from './components/planet-list/planet-list.component';
 import { EnterBirthDateComponent } from './components/enter-birth-date/enter-birth-date.component';
+import { MonumentListComponent } from './components/monument-list/monument-list.component';
+import { CalculateMonumentsComponent } from './components/calculate-monuments/calculate-monuments.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlanetListComponent,
-    EnterBirthDateComponent
+    EnterBirthDateComponent,
+    MonumentListComponent,
+    CalculateMonumentsComponent
   ],
   imports: [
     BrowserModule,

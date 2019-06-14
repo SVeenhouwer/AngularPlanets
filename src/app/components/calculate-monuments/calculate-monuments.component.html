@@ -1,0 +1,17 @@
+<br><br>
+
+<div>
+  List of available monuments: <br><br>
+  <ul>
+    <li *ngFor="let monument of monuments"><input type="checkbox">{{ monument.name }} (id:{{ monument.id }})<br>
+    </li>
+  </ul>
+</div>
+
+<div>
+  List of available planets: <br><br>
+  <ul>
+    <li *ngFor="let planet of planets"><input type="checkbox">{{ planet.name }} (id:{{ planet.id }})<br>
+    </li>
+  </ul>
+</div>

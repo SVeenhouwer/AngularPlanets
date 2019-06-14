@@ -1,0 +1,11 @@
+<br><br>
+
+<div>
+  List of available monuments: <br><br>
+  <ul>
+    <li *ngFor="let monument of monuments">{{ monument.name }} (id:{{ monument.id }})<br>
+      The date on which construction of this monument was finished is listed as {{ monument.buildDate }}. <br>
+      The age of this monument today has been calculated as being {{ monument.ageDays }} days, or a period of {{ monument.agePeriod }}.<br><br>
+    </li>
+  </ul>
+</div>
