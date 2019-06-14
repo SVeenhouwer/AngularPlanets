@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CalculateBirthDateService } from 'src/app/services/calculate-birth-date.service';
 import { CalculateBirthDate } from 'src/app/model/calculate-birth-date';
 import {ActivatedRoute, ParamMap } from '@angular/router';
+import { PlanetService } from 'src/app/services/planet.service';
 
 @Component({
   selector: 'app-enter-birth-date',
@@ -21,11 +22,18 @@ export class EnterBirthDateComponent implements OnInit {
   enteredMonths;
   enteredDays;
 
+  private planets;
+
   constructor(private calculateBirthDateService: CalculateBirthDateService,
+              private planetService: PlanetService,
               private route: ActivatedRoute
               ) { }
   
-  ngOnInit() {}
+  ngOnInit() {
+    this.planetService.getPlanetList().subscribe(data => {
+      this.planets = data;
+    })
+  }
 
   update(): void {
     console.log("In update function CalculateBirthDate");

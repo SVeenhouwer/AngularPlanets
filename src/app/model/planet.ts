@@ -3,4 +3,5 @@ export class Planet {
     name: string;
     orbitalPeriodSolar: Number;
     orbitalPeriodAxis: Number;
+    selected;
 }

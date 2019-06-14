@@ -3,7 +3,9 @@
 <div>
   List of available monuments: <br><br>
   <ul>
-    <li *ngFor="let monument of monuments"><input type="checkbox">{{ monument.name }} (id:{{ monument.id }})<br>
+    <li *ngFor="let monument of monuments"><input type="checkbox" name="selected" [(ngModel)]="monument.selected">
+      {{ monument.name }} (age: {{ monument.agePeriod }})
+      (Selected: {{ monument.selected}} <br>
     </li>
   </ul>
 </div>
@@ -11,7 +13,12 @@
 <div>
   List of available planets: <br><br>
   <ul>
-    <li *ngFor="let planet of planets"><input type="checkbox">{{ planet.name }} (id:{{ planet.id }})<br>
+    <li *ngFor="let planet of planets"><input type="checkbox" name="selected" [(ngModel)]="planet.selected">
+      {{ planet.name }} (year: {{ planet.orbitalPeriodSolar }} Earth days, 
+      day: {{ planet.orbitalPeriodAxis }} Earth days)
+      (Selected: {{ planet.selected }}) <br>
     </li>
   </ul>
 </div>
+
+<button (click) = "calculateMonuments()">Calculate</button> <br>

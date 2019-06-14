@@ -12,15 +12,13 @@ Date of birth entered: {{ date.enteredDate }} // {{ putInDate}} //
     Years: {{ enteredYears}}, Months: {{ enteredMonths}}, Days: {{ enteredDays}} <br>
 Calculated period of Earth days: {{ date.dateDays }} // {{ date.datePeriod }} </div><br>
 
-Please select for which planets you want to calculate the native days or years by selecting from the list below: <br>
-<input type="checkbox">Mercury <br>
-<input type="checkbox">Venus <br>
-<input type="checkbox">Earth <br>
-<input type="checkbox">Mars <br>
-<input type="checkbox">Jupiter <br>
-<input type="checkbox">Saturn <br>
-<input type="checkbox">Uranus <br>
-<input type="checkbox">Neptune <br><br>
+<div>
+    Please select for which planets you want to calculate the native days or years by selecting from the list below: <br>
+    <ul>
+        <li *ngFor="let planet of planets"><input type="checkbox" name="selected" [(ngModel)]="planet.selected">
+            {{ planet.name }} (Selected: {{ planet.selected }})<br>
+        </li>
+    </ul>
+</div>
 
 <button (click) = "calculateBirthDate()">Calculate</button> <br>
-

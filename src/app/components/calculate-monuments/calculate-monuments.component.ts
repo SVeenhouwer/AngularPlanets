@@ -13,6 +13,8 @@ export class CalculateMonumentsComponent implements OnInit {
 
   private monuments;
   private planets;
+  private selectedMonuments;
+  private selectedPlanets;
 
   ngOnInit() {
     this.monumentService.getMonumentList().subscribe(data => {
@@ -21,6 +23,10 @@ export class CalculateMonumentsComponent implements OnInit {
     this.planetService.getPlanetList().subscribe(data => {
       this.planets = data;
     })
+  }
+
+  calculateMonuments() {
+    
   }
 
 }
