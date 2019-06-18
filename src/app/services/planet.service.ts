@@ -18,6 +18,6 @@ export class PlanetService {
   }
 
   findPlanetById(id: Number): Observable<Planet> {
-    return this.httpClient.get<Planet>('${this.url}/${this.endpoint}/${id}');
+    return this.httpClient.get<Planet>(`${this.url}/${this.endpoint}/${id}`);
   }
 }
