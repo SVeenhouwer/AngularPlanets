@@ -4,6 +4,7 @@ import { PlanetListComponent } from './components/planet-list/planet-list.compon
 import { EnterBirthDateComponent } from './components/enter-birth-date/enter-birth-date.component';
 import { MonumentListComponent } from './components/monument-list/monument-list.component';
 import { CalculateMonumentsComponent } from './components/calculate-monuments/calculate-monuments.component';
+import { CalculatePlanetsSimpleComponent } from './components/calculate-planets-simple/calculate-planets-simple.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'calculateMonuments',
     component: CalculateMonumentsComponent
+  },
+  {
+    path: 'calculatePlanetsSimple',
+    component: CalculatePlanetsSimpleComponent
   }
 ];
 

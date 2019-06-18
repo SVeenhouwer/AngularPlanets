@@ -8,6 +8,7 @@ import { PlanetListComponent } from './components/planet-list/planet-list.compon
 import { EnterBirthDateComponent } from './components/enter-birth-date/enter-birth-date.component';
 import { MonumentListComponent } from './components/monument-list/monument-list.component';
 import { CalculateMonumentsComponent } from './components/calculate-monuments/calculate-monuments.component';
+import { CalculatePlanetsSimpleComponent } from './components/calculate-planets-simple/calculate-planets-simple.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CalculateMonumentsComponent } from './components/calculate-monuments/ca
     PlanetListComponent,
     EnterBirthDateComponent,
     MonumentListComponent,
-    CalculateMonumentsComponent
+    CalculateMonumentsComponent,
+    CalculatePlanetsSimpleComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,207 @@
+<br><br>
+
+<div>
+  List of available planets: <br><br>
+  <ul>
+    <li>
+      {{ planets[0].name }} (id:{{ planets[0].id }})<br>
+      Solar year (period of orbit around the Sun) in Earth days: {{ planets[0].orbitalPeriodSolar }}<br>
+      Day (period of rotation around its axis) in Earth days: {{ planets[0].orbitalPeriodAxis }}<br><br>
+      
+      <table>
+        <tr>
+          <td>
+            <input type="number" name="enteredYearsMercury" [(ngModel)]="enteredYearsMercury" placeholder="Enter years">
+            <button (click) = "calculateYearsMercury()">Calculate</button><br>
+            Entered Earth years: {{ enteredYearsMercury }} <br>
+            Calculated Mercury days: {{ calculatedMercuryYearsDays }} <br>
+            Calculated Mercury years: {{ calculatedMercuryYears }} <br><br>
+          </td>
+
+          <td>
+            <input type="number" name="enteredDaysMercury" [(ngModel)]="enteredDaysMercury" placeholder="Enter days">
+            <button (click) = "calculateDaysMercury()">Calculate</button><br>
+            Entered Earth days: {{ enteredDaysMercury }} <br>
+            Calculated Mercury days: {{ calculatedMercuryDays }} <br>
+            Calculated Mercury years: {{ calculatedMercuryDaysYears }} <br><br>
+          </td>
+        </tr>
+      </table>
+    </li>
+    <li>
+      {{ planets[1].name }} (id:{{ planets[1].id }})<br>
+      Solar year (period of orbit around the Sun) in Earth days: {{ planets[1].orbitalPeriodSolar }}<br>
+      Day (period of rotation around its axis) in Earth days: {{ planets[1].orbitalPeriodAxis }}<br><br>
+          
+      <table>
+        <tr>
+          <td>
+            <input type="number" name="enteredYearsVenus" [(ngModel)]="enteredYearsVenus" placeholder="Enter years">
+            <button (click) = "calculateYearsVenus()">Calculate</button><br>
+            Entered Earth years: {{ enteredYearsVenus }} <br>
+            Calculated Venus days: {{ calculatedVenusYearsDays }} <br>
+            Calculated Venus years: {{ calculatedVenusYears }} <br><br>
+          </td>
+
+          <td>
+            <input type="number" name="enteredDaysVenus" [(ngModel)]="enteredDaysVenus" placeholder="Enter days">
+            <button (click) = "calculateDaysVenus()">Calculate</button><br>
+            Entered Earth days: {{ enteredDaysVenus }} <br>
+            Calculated Venus days: {{ calculatedVenusDays }} <br>
+            Calculated Venus years: {{ calculatedVenusDaysYears }} <br><br>
+          </td>
+        </tr>
+      </table>
+    </li>
+    <li>
+      {{ planets[2].name }} (id:{{ planets[2].id }})<br>
+      Solar year (period of orbit around the Sun) in Earth days: {{ planets[2].orbitalPeriodSolar }}<br>
+      Day (period of rotation around its axis) in Earth days: {{ planets[2].orbitalPeriodAxis }}<br><br>
+
+      <table>
+        <tr>
+          <td>
+            <input type="number" name="enteredYearsEarth" [(ngModel)]="enteredYearsEarth" placeholder="Enter years">
+            <button (click) = "calculateYearsEarth()">Calculate</button><br>
+            Entered Earth years: {{ enteredYearsEarth }} <br>
+            Calculated Earth days: {{ calculatedDaysEarth }} <br>
+            Calculated Earth years: {{ enteredYearsEarth }} <br><br>
+          </td>
+
+          <td>
+            <input type="number" name="enteredDaysEarth" [(ngModel)]="enteredDaysEarth" placeholder="Enter days">
+            <button (click) = "calculateDaysEarth()">Calculate</button><br>
+            Entered Earth days: {{ enteredDaysEarth }} <br>
+            Calculated Earth days: {{ enteredDaysEarth }} <br>
+            Calculated Earth years: {{ calculatedEarthYears }} <br><br>
+          </td>
+        </tr>
+      </table>
+    </li>
+    <li>
+      {{ planets[3].name }} (id:{{ planets[3].id }})<br>
+      Solar year (period of orbit around the Sun) in Earth days: {{ planets[3].orbitalPeriodSolar }}<br>
+      Day (period of rotation around its axis) in Earth days: {{ planets[3].orbitalPeriodAxis }}<br><br>
+
+      <table>
+        <tr>
+          <td>
+            <input type="number" name="enteredYearsMars" [(ngModel)]="enteredYearsMars" placeholder="Enter years">
+            <button (click) = "calculateYearsMars()">Calculate</button><br>
+            Entered Earth years: {{ enteredYearsMars }} <br>
+            Calculated Mars days: {{ calculatedMarsYearsDays }} <br>
+            Calculated Mars years: {{ calculatedMarsYears }} <br><br>
+          </td>
+
+          <td>
+            <input type="number" name="enteredDaysMars" [(ngModel)]="enteredDaysMars" placeholder="Enter days">
+            <button (click) = "calculateDaysMars()">Calculate</button><br>
+            Entered Earth days: {{ enteredDaysMars }} <br>
+            Calculated Mars days: {{ calculatedMarsDays }} <br>
+            Calculated Mars years: {{ calculatedMarsDaysYears }} <br><br>
+          </td>
+        </tr>
+      </table>
+    </li>
+    <li>
+      {{ planets[4].name }} (id:{{ planets[4].id }})<br>
+      Solar year (period of orbit around the Sun) in Earth days: {{ planets[4].orbitalPeriodSolar }}<br>
+      Day (period of rotation around its axis) in Earth days: {{ planets[4].orbitalPeriodAxis }}<br><br>
+
+      <table>
+        <tr>
+          <td>
+            <input type="number" name="enteredYearsJupiter" [(ngModel)]="enteredYearsJupiter" placeholder="Enter years">
+            <button (click) = "calculateYearsJupiter()">Calculate</button><br>
+            Entered Earth years: {{ enteredYearsJupiter }} <br>
+            Calculated Jupiter days: {{ calculatedJupiterYearsDays }} <br>
+            Calculated Jupiter years: {{ calculatedJupiterYears }} <br><br>
+          </td>
+
+          <td>
+            <input type="number" name="enteredDaysJupiter" [(ngModel)]="enteredDaysJupiter" placeholder="Enter days">
+            <button (click) = "calculateDaysJupiter()">Calculate</button><br>
+            Entered Earth days: {{ enteredDaysJupiter }} <br>
+            Calculated Jupiter days: {{ calculatedJupiterDays }} <br>
+            Calculated Jupiter years: {{ calculatedJupiterDaysYears }} <br><br>
+          </td>
+        </tr>
+      </table>
+    </li>
+    <li>
+      {{ planets[5].name }} (id:{{ planets[5].id }})<br>
+      Solar year (period of orbit around the Sun) in Earth days: {{ planets[5].orbitalPeriodSolar }}<br>
+      Day (period of rotation around its axis) in Earth days: {{ planets[5].orbitalPeriodAxis }}<br><br>
+
+      <table>
+        <tr>
+          <td>
+            <input type="number" name="enteredYearsSaturn" [(ngModel)]="enteredYearsSaturn" placeholder="Enter years">
+            <button (click) = "calculateYearsSaturn()">Calculate</button><br>
+            Entered Earth years: {{ enteredYearsSaturn }} <br>
+            Calculated Saturn days: {{ calculatedSaturnYearsDays }} <br>
+            Calculated Saturn years: {{ calculatedSaturnYears }} <br><br>
+          </td>
+
+          <td>
+            <input type="number" name="enteredDaysSaturn" [(ngModel)]="enteredDaysSaturn" placeholder="Enter days">
+            <button (click) = "calculateDaysSaturn()">Calculate</button><br>
+            Entered Earth days: {{ enteredDaysSaturn }} <br>
+            Calculated Saturn days: {{ calculatedSaturnDays }} <br>
+            Calculated Saturn years: {{ calculatedSaturnDaysYears }} <br><br>
+          </td>
+        </tr>
+      </table>
+    </li>
+    <li>
+      {{ planets[6].name }} (id:{{ planets[6].id }})<br>
+      Solar year (period of orbit around the Sun) in Earth days: {{ planets[6].orbitalPeriodSolar }}<br>
+      Day (period of rotation around its axis) in Earth days: {{ planets[6].orbitalPeriodAxis }}<br><br>
+
+      <table>
+        <tr>
+          <td>
+            <input type="number" name="enteredYearsUranus" [(ngModel)]="enteredYearsUranus" placeholder="Enter years">
+            <button (click) = "calculateYearsUranus()">Calculate</button><br>
+            Entered Earth years: {{ enteredYearsUranus }} <br>
+            Calculated Uranus days: {{ calculatedUranusYearsDays }} <br>
+            Calculated Uranus years: {{ calculatedUranusYears }} <br><br>
+          </td>
+
+          <td>
+            <input type="number" name="enteredDaysUranus" [(ngModel)]="enteredDaysUranus" placeholder="Enter days">
+            <button (click) = "calculateDaysUranus()">Calculate</button><br>
+            Entered Earth days: {{ enteredDaysUranus }} <br>
+            Calculated Uranus days: {{ calculatedUranusDays }} <br>
+            Calculated Uranus years: {{ calculatedUranusDaysYears }} <br><br>
+          </td>
+        </tr>
+      </table>
+    </li>
+    <li>
+      {{ planets[7].name }} (id:{{ planets[7].id }})<br>
+      Solar year (period of orbit around the Sun) in Earth days: {{ planets[7].orbitalPeriodSolar }}<br>
+      Day (period of rotation around its axis) in Earth days: {{ planets[7].orbitalPeriodAxis }}<br><br>
+
+      <table>
+        <tr>
+          <td>
+            <input type="number" name="enteredYearsNeptune" [(ngModel)]="enteredYearsNeptune" placeholder="Enter years">
+            <button (click) = "calculateYearsNeptune()">Calculate</button><br>
+            Entered Earth years: {{ enteredYearsNeptune }} <br>
+            Calculated Neptune days: {{ calculatedNeptuneYearsDays }} <br>
+            Calculated Neptune years: {{ calculatedNeptuneYears }} <br><br>
+          </td>
+
+          <td>
+            <input type="number" name="enteredDaysNeptune" [(ngModel)]="enteredDaysNeptune" placeholder="Enter days">
+            <button (click) = "calculateDaysNeptune()">Calculate</button><br>
+            Entered Earth days: {{ enteredDaysNeptune }} <br>
+            Calculated Neptune days: {{ calculatedNeptuneDays }} <br>
+            Calculated Neptune years: {{ calculatedNeptuneDaysYears }} <br><br>
+          </td>
+        </tr>
+      </table>
+    </li>
+  </ul>
+</div>

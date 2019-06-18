@@ -12,7 +12,7 @@
 
 <div>
   List of available planets: <br><br>
-  <ul>
+  <ul> 
     <li *ngFor="let planet of planets"><input type="checkbox" name="selected" [(ngModel)]="planet.selected">
       {{ planet.name }} (year: {{ planet.orbitalPeriodSolar }} Earth days, 
       day: {{ planet.orbitalPeriodAxis }} Earth days)
@@ -21,4 +21,7 @@
   </ul>
 </div>
 
-<button (click) = "calculateMonuments()">Calculate</button> <br>
+<button (click) = "calculateMonuments()">Calculate</button> <br><br>
+
+Calculated periods: <br>
+<div [innerHTML]="calculationOutput"></div>
