@@ -3,7 +3,9 @@
 <div>
   List of available planets: <br><br>
   <ul>
-    <li *ngFor="let planet of planets">{{ planet.name }} (id:{{ planet.id }})<br>
+    <li *ngFor="let planet of planets">
+      <a [routerLink]="['/findPlanetById',planet.id]">
+      {{ planet.name }} (id:{{ planet.id }})</a><br>
       Solar year (period of orbit around the sun) is {{ planet.orbitalPeriodSolar }} Earth days.<br>
       Day (period of rotation around its axis) is {{ planet.orbitalPeriodAxis }} Earth days.<br><br>
     </li>

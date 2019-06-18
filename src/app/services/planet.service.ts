@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Planet } from '../model/planet';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class PlanetService {
     return this.httpClient.get(`${this.url}/${this.endpoint}`);
   }
 
-  findPlanetById(id: Number) {
-    return this.httpClient.get('${this.url}/${this.endpoint}/${id}');
+  findPlanetById(id: Number): Observable<Planet> {
+    return this.httpClient.get<Planet>('${this.url}/${this.endpoint}/${id}');
   }
 }

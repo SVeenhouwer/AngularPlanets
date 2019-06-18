@@ -192,7 +192,7 @@ export class CalculatePlanetsSimpleComponent implements OnInit {
   }
 
   private enteredYearsNeptune;
-  private calculatedDaysNeptune;
+  private calculatedDaysNeptune; 
   private calculatedNeptuneYears;
   private calculatedNeptuneYearsDays;
 
