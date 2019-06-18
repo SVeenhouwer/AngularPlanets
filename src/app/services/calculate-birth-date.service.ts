@@ -22,7 +22,8 @@ export class CalculateBirthDateService {
   }
 
   update(calculateBirthDate: CalculateBirthDate){
-    return this.httpClient.put('${this.url}/${this.endpoint}/${id}', calculateBirthDate);
+    var id = calculateBirthDate.id;
+    return this.httpClient.put(`${this.url}/${this.endpoint}/${id}`, calculateBirthDate);
   }
 
   sendBirthDate(id: Number, enteredDate) {

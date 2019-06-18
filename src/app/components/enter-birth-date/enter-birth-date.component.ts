@@ -17,6 +17,7 @@ export class EnterBirthDateComponent implements OnInit {
   id: Number;
   private foundDate;
   private enteredCalculateBirthDate;
+  private calculateBirthDate;
 
   enteredYears;
   enteredMonths;
@@ -32,6 +33,12 @@ export class EnterBirthDateComponent implements OnInit {
   ngOnInit() {
     this.planetService.getPlanetList().subscribe(data => {
       this.planets = data;
+    })
+
+    this.calculateBirthDateService.findById(1).subscribe( calculateBirthDate => {
+      console.log("In findById function in initiation");
+      this.calculateBirthDate = calculateBirthDate;
+      console.log("Exiting findById function in initiation");
     })
   }
 
