@@ -18,11 +18,15 @@ export class FindPlanetByIdComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log("Entering findPlanetById");
     const id = +this.route.snapshot.params["id"];
+
+    console.log("Detected id: "+id);
 
     this.planetService.findPlanetById(id).subscribe( planet => {
       this.planet = planet;
     })
+    console.log("Exiting findPlanetById");
   }
 
 }
