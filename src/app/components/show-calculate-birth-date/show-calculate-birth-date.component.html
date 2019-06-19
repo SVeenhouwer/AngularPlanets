@@ -1,0 +1,11 @@
+<br><br>
+
+Detected entered birth date and following calculations (id: {{ calculateBirthDate?.id }}): <br><br>
+
+<div *ngIf="calculateBirthDate">
+  Entered Birth Date: {{ calculateBirthDate.enteredDate }}<br>
+  Calculated Period: {{ calculateBirthDate.datePeriod }}<br>
+  Calculated Days: {{ calculateBirthDate.dateDays }}<br><br>
+</div>
+
+<a [routerLink]="['/editCalculateBirthDate', calculateBirthDate.id]">Edit</a>

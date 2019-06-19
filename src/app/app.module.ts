@@ -10,6 +10,8 @@ import { MonumentListComponent } from './components/monument-list/monument-list.
 import { CalculateMonumentsComponent } from './components/calculate-monuments/calculate-monuments.component';
 import { CalculatePlanetsSimpleComponent } from './components/calculate-planets-simple/calculate-planets-simple.component';
 import { FindPlanetByIdComponent } from './components/find-planet-by-id/find-planet-by-id.component';
+import { EditCalculateBirthDateComponent } from './components/edit-calculate-birth-date/edit-calculate-birth-date.component';
+import { ShowCalculateBirthDateComponent } from './components/show-calculate-birth-date/show-calculate-birth-date.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FindPlanetByIdComponent } from './components/find-planet-by-id/find-pla
     MonumentListComponent,
     CalculateMonumentsComponent,
     CalculatePlanetsSimpleComponent,
-    FindPlanetByIdComponent
+    FindPlanetByIdComponent,
+    EditCalculateBirthDateComponent,
+    ShowCalculateBirthDateComponent
   ],
   imports: [
     BrowserModule,

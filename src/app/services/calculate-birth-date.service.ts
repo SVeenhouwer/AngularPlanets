@@ -17,13 +17,12 @@ export class CalculateBirthDateService {
     return this.httpClient.get(`${this.url}/${this.endpoint}`);
   }
 
-  findById(id: Number) : Observable<CalculateBirthDate> {
+  findById(id: Number): Observable<CalculateBirthDate> {
     return this.httpClient.get<CalculateBirthDate>(`${this.url}/${this.endpoint}/${id}`);
   }
 
-  update(calculateBirthDate: CalculateBirthDate){
-    var id = calculateBirthDate.id;
-    return this.httpClient.put(`${this.url}/${this.endpoint}/${id}`, calculateBirthDate);
+  update(calculateBirthDate: CalculateBirthDate): Observable<CalculateBirthDate>{
+    return this.httpClient.put<CalculateBirthDate>(`${this.url}/${this.endpoint}/${calculateBirthDate.id}`, calculateBirthDate);
   }
 
   sendBirthDate(id: Number, enteredDate) {
