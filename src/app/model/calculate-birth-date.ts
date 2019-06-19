@@ -1,3 +1,5 @@
+import { Planet } from './planet';
+
 export class CalculateBirthDate {
 
     today;
@@ -6,5 +8,8 @@ export class CalculateBirthDate {
     datePeriod;
     dateDays;
     id: Number;
+    calculatedPlanetDays: Number;
+    calculatedPlanetYears: Number;
+    planet: Planet;
 
 }

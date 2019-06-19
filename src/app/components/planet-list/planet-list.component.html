@@ -6,8 +6,9 @@
     <li *ngFor="let planet of planets">
       <a [routerLink]="['/findPlanetById',planet.id]">
       {{ planet.name }} (id:{{ planet.id }})</a><br>
-      Solar year (period of orbit around the sun) is {{ planet.orbitalPeriodSolar }} Earth days.<br>
-      Day (period of rotation around its axis) is {{ planet.orbitalPeriodAxis }} Earth days.<br><br>
+      A solar orbit (year) has a duration of {{ planet.orbitalPeriodSolar }} Earth days.<br>
+      An axial rotation (day) has a duration of {{ planet.orbitalPeriodAxis }} Earth days.<br>
+      <a [routerLink]="['/showcalculateBirthDate',planet.id]">Calculate From Date</a> <br><br>
     </li>
   </ul>
 </div>

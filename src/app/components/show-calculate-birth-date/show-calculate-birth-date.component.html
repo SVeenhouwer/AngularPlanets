@@ -4,8 +4,11 @@ Detected entered birth date and following calculations (id: {{ calculateBirthDat
 
 <div *ngIf="calculateBirthDate">
   Entered Birth Date: {{ calculateBirthDate.enteredDate }}<br>
-  Calculated Period: {{ calculateBirthDate.datePeriod }}<br>
-  Calculated Days: {{ calculateBirthDate.dateDays }}<br><br>
+  Calculated Entered Period: {{ calculateBirthDate.datePeriod }}<br>
+  Calculated Entered Days: {{ calculateBirthDate.dateDays }}<br><br>
+
+  Calculated {{ calculateBirthDate.planet.name }} Days: {{ calculateBirthDate.calculatedPlanetDays }}<br>
+  Calculated {{ calculateBirthDate.planet.name }} Years: {{ calculateBirthDate.calculatedPlanetYears }}<br>
 </div>
 
 <a [routerLink]="['/editCalculateBirthDate', calculateBirthDate.id]">Edit</a>
