@@ -1,6 +1,29 @@
-<body><br>
+<div>
+  <table class="table table-hover" >
+    <thead class="thead" style="background-color: #001133; color:#e6eeff" >
+      <tr>
+        <th scope="col" class="text-center">Name</th>
+        <th scope="col" class="text-center">ID</th>
+        <th scope="col" class="text-center">Build Date</th>
+        <th scope="col" class="text-center">Age (period)</th>
+        <th scope="col" class="text-center">Age (Earth days)</th>
+        <th scope="col" class="text-center">Calculate From Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let monument of monuments">
+        <td>{{ monument.name }} <br> [<a [routerLink]="['/findMonumentById',monument.id]">details</a>]</td>
+        <td class="text-center">{{ monument.id }}</td>
+        <td class="text-center">{{ monument.buildDate }}</td>
+        <td class="text-right">{{ monument.agePeriod }}</td>
+        <td class="text-right">{{ monument.ageDays }}</td>
+        <td class="text-center"><a [routerLink]="['/editCalculateMonument',monument.id]">Calculate</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-<div class="container">
+<!-- <div class="container">
   List of available monuments: <br><br>
   <ul>
     <li *ngFor="let monument of monuments">{{ monument.name }} (id:{{ monument.id }})<br>
@@ -8,6 +31,5 @@
       The age of this monument today has been calculated as being {{ monument.ageDays }} days, or a period of {{ monument.agePeriod }}.<br><br>
     </li>
   </ul>
-</div>
+</div> -->
 
-</body>

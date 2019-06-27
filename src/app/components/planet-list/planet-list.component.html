@@ -1,6 +1,27 @@
-<br>
+<div>
+  <table class="table table-hover" >
+    <thead class="thead" style="background-color: #001133; color:#e6eeff" >
+      <tr>
+        <th scope="col" class="text-center">Name</th>
+        <th scope="col" class="text-center">ID</th>
+        <th scope="col" class="text-center">Solar Orbit <br>(Earth days)</th>
+        <th scope="col" class="text-center">Axial Rotation <br> (Earth days)</th>
+        <th scope="col" class="text-center">Calculate From Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let planet of planets">
+        <td>{{ planet.name }} [<a [routerLink]="['/findPlanetById',planet.id]">details</a>]</td>
+        <td class="text-center">{{ planet.id }}</td>
+        <td class="text-right">{{ planet.orbitalPeriodSolar }}</td>
+        <td class="text-right">{{ planet.orbitalPeriodAxis }}</td>
+        <td class="text-center"><a [routerLink]="['/editCalculateBirthDate',planet.id]">Calculate</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-<div class="container">
+<!-- <div class="container">
   List of available planets: <br><br>
   <ul>
     <li *ngFor="let planet of planets">
@@ -10,4 +31,4 @@
       <a [routerLink]="['/showcalculateBirthDate',planet.id]">Calculate From Date</a> <br><br>
     </li>
   </ul>
-</div>
+</div> -->

@@ -6,8 +6,16 @@ Please enter your Birth Date below (id: {{ calculateBirthDate.id }}): <br><br>
 
 <div class="container" *ngIf="calculateBirthDate">
   <input type="date" [(ngModel)] = "calculateBirthDate.enteredDate">
-  <input type="button" value="Save" (click)="update()"><br><br>
-  <a [routerLink]="['/showcalculateBirthDate', calculateBirthDate.id]">Show</a>
+  <input type="button" value="Calculate" (click)="update()"><br><br>
+</div>
+
+<div class="container" *ngIf="calculateBirthDate">
+  Entered Birth Date: {{ calculateBirthDate.enteredDate }}<br>
+  Calculated Entered Period: {{ calculateBirthDate.datePeriod }}<br>
+  Calculated Entered Earth Days: {{ calculateBirthDate.dateDays }}<br><br>
+
+  Calculated {{ calculateBirthDate.planet.name }} Days: {{ calculateBirthDate.calculatedPlanetDays }}<br>
+  Calculated {{ calculateBirthDate.planet.name }} Years: {{ calculateBirthDate.calculatedPlanetYears }}<br>
 </div>
 
 
