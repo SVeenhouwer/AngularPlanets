@@ -1,11 +1,10 @@
-<br><br>
+<br>
 
-<div>
+<div class="container">
   List of available planets: <br><br>
   <ul>
     <li *ngFor="let planet of planets">
-      <a [routerLink]="['/findPlanetById',planet.id]">
-      {{ planet.name }} (id:{{ planet.id }})</a><br>
+      {{ planet.name }} (id:{{ planet.id }}) [<a [routerLink]="['/findPlanetById',planet.id]">details</a>]<br>
       A solar orbit (year) has a duration of {{ planet.orbitalPeriodSolar }} Earth days.<br>
       An axial rotation (day) has a duration of {{ planet.orbitalPeriodAxis }} Earth days.<br>
       <a [routerLink]="['/showcalculateBirthDate',planet.id]">Calculate From Date</a> <br><br>

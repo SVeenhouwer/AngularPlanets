@@ -1,11 +1,14 @@
-<br><br>
+<br>
 
+<div class="container">
 Please enter your Birth Date below (id: {{ calculateBirthDate.id }}): <br><br>
-
-<div *ngIf="calculateBirthDate">
-  <input type="date" [(ngModel)] = "calculateBirthDate.enteredDate">
-  <input type="button" value="Save" (click)="update()"><br><br>
 </div>
 
-<a [routerLink]="['/showcalculateBirthDate', calculateBirthDate.id]">Show</a>
+<div class="container" *ngIf="calculateBirthDate">
+  <input type="date" [(ngModel)] = "calculateBirthDate.enteredDate">
+  <input type="button" value="Save" (click)="update()"><br><br>
+  <a [routerLink]="['/showcalculateBirthDate', calculateBirthDate.id]">Show</a>
+</div>
+
+
 

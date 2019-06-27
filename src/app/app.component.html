@@ -1,16 +1,24 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    <img src="../assets/images/earth.png"  width="8%" height="8%"/>
+    Planets in Time
   </h1>
 </div>
 
+<nav class = "navbar navbar-dark" style="background-color: #001133">
+  <button class="btn btn-light" style="background-color: #e6eeff" onclick = "window.location.href = 'http://localhost:4200/planetList';">
+    Planets
+  </button>
+
+  <button class="btn btn-light" style="background-color: #e6eeff" onclick = "window.location.href = 'http://localhost:4200/monumentList';">
+    Monuments
+  </button>
+</nav>
+
+<!-- <br>
 <button onclick = "window.location.href = 'http://localhost:4200/planetList';">
   PlanetList
-</button>
-
-<button onclick = "window.location.href = 'http://localhost:4200/showcalculateBirthDate/1';">
-  Show Enter Birth Date
 </button>
 
 <button onclick = "window.location.href = 'http://localhost:4200/enterBirthDate';">
@@ -27,6 +35,6 @@
 
 <button onclick = "window.location.href = 'http://localhost:4200/calculatePlanetsSimple';">
   Calculate Planets (FE)
-</button>
+</button> -->
 
 <router-outlet></router-outlet>

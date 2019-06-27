@@ -1,14 +1,18 @@
-<br><br>
+<br>
 
+<div class="container">
 Detected entered birth date and following calculations (id: {{ calculateBirthDate?.id }}): <br><br>
+</div>
 
-<div *ngIf="calculateBirthDate">
+<div class="container" *ngIf="calculateBirthDate">
   Entered Birth Date: {{ calculateBirthDate.enteredDate }}<br>
   Calculated Entered Period: {{ calculateBirthDate.datePeriod }}<br>
   Calculated Entered Days: {{ calculateBirthDate.dateDays }}<br><br>
 
   Calculated {{ calculateBirthDate.planet.name }} Days: {{ calculateBirthDate.calculatedPlanetDays }}<br>
   Calculated {{ calculateBirthDate.planet.name }} Years: {{ calculateBirthDate.calculatedPlanetYears }}<br>
+
+  <a [routerLink]="['/editCalculateBirthDate', calculateBirthDate.id]">Edit</a>
 </div>
 
-<a [routerLink]="['/editCalculateBirthDate', calculateBirthDate.id]">Edit</a>
+
