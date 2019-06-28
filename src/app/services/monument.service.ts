@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Monument } from '../model/monument';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +17,7 @@ export class MonumentService {
     return this.httpClient.get(`${this.url}/${this.endpoint}`);
   }
 
-  findMonumentById(id: Number) {
-    return this.httpClient.get('${this.url}/${this.endpoint}/${id}');
+  findMonumentById(id: Number): Observable<Monument> {
+    return this.httpClient.get<Monument>(`${this.url}/${this.endpoint}/${id}`);
   }
 }
