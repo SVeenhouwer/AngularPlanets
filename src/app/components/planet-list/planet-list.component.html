@@ -7,6 +7,7 @@
         <th scope="col" class="align-middle && text-center">Solar Orbit <br>(Earth days)</th>
         <th scope="col" class="align-middle && text-center">Axial Rotation <br> (Earth days)</th>
         <th scope="col" class="align-middle && text-center">Calculate From Date</th>
+        <th scope="col" class="align-middle && text-center">Calculate From Period</th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
         <td class="align-middle && text-right">{{ planet.orbitalPeriodSolar }}</td>
         <td class="align-middle && text-right">{{ planet.orbitalPeriodAxis }}</td>
         <td class="align-middle && text-center"><a [routerLink]="['/editCalculateBirthDate',planet.id]">Calculate</a></td>
+        <td class="align-middle && text-center"><a [routerLink]="['/editCalculatePeriod',planet.id]">Calculate</a></td>
       </tr>
     </tbody>
   </table>

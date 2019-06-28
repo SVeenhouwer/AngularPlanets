@@ -13,6 +13,7 @@ import { FindPlanetByIdComponent } from './components/find-planet-by-id/find-pla
 import { EditCalculateBirthDateComponent } from './components/edit-calculate-birth-date/edit-calculate-birth-date.component';
 import { ShowCalculateBirthDateComponent } from './components/show-calculate-birth-date/show-calculate-birth-date.component';
 import { FindMonumentByIdComponent } from './components/find-monument-by-id/find-monument-by-id.component';
+import { EditCalculatePeriodComponent } from './components/edit-calculate-period/edit-calculate-period.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FindMonumentByIdComponent } from './components/find-monument-by-id/find
     FindPlanetByIdComponent,
     EditCalculateBirthDateComponent,
     ShowCalculateBirthDateComponent,
-    FindMonumentByIdComponent
+    FindMonumentByIdComponent,
+    EditCalculatePeriodComponent
   ],
   imports: [
     BrowserModule,

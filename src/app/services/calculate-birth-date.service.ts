@@ -29,8 +29,4 @@ export class CalculateBirthDateService {
     console.log("In calculateBirthDateService sendBirthDate function with enteredDate: "+enteredDate)
     return this.httpClient.put(`${this.url}/${this.endpoint}/${id}`, id, enteredDate);
   }
-
-  calculateBirthDate() {
-
-  }
 }
