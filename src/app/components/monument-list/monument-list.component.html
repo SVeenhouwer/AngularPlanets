@@ -13,8 +13,8 @@
       <tr *ngFor="let monument of monuments">
         <td class="align-middle">{{ monument.name }} <br> [<a [routerLink]="['/findMonumentById',monument.id]">details</a>]</td>
         <td class="align-middle && text-center">{{ monument.id }}</td>
-        <td class="align-middle && text-center">{{ monument.buildDate }}</td>
-        <td class="align-middle && text-center">{{ monument.agePeriod }}</td>
+        <td class="align-middle && text-center">{{ monument.buildDateString }}</td>
+        <td class="align-middle && text-center">{{ monument.agePeriodString }}</td>
         <td class="align-middle && text-right">{{ monument.ageDays }}</td>
       </tr>
     </tbody>

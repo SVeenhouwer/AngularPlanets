@@ -6,4 +6,6 @@ export class Monument {
     agePeriod;
     ageDays: Number;
     selected;
+    buildDateString: string;
+    agePeriodString: string;
 }
