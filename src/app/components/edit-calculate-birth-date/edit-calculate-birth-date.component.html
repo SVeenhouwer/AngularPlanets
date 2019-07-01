@@ -1,12 +1,10 @@
 <br>
 
-<div class="container">
-Please enter your Birth Date below (id: {{ calculateBirthDate.id }}): <br><br>
-</div>
-
 <div class="container" *ngIf="calculateBirthDate">
+  Please enter your Birth Date below (id: {{ calculateBirthDate.id }}): <br><br>
   <input type="date" [(ngModel)] = "calculateBirthDate.enteredDate">
-  <input type="button" value="Calculate" (click)="update()"><br><br>
+  <input type="button" value="Enter" (click)="update()">
+  <input type="button" value="Calculate" (click)="refreshen()"><br><br>
 </div>
 
 <div class="container" *ngIf="calculateBirthDate">

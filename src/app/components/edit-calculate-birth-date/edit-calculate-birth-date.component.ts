@@ -33,6 +33,9 @@ export class EditCalculateBirthDateComponent implements OnInit {
     this.calculateBirthDateService.update(this.calculateBirthDate).subscribe(updatedCalculateBirthDate => {
       console.log("Updated in Component: "+updatedCalculateBirthDate.id);
     });
+  }
+ 
+  refreshen(): void{
     console.log("Entering findById in update function");
     const id = +this.route.snapshot.params["id"];
   

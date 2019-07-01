@@ -1,12 +1,10 @@
 <br>
 
-<div class="container">
-Please enter a number of years below (id: {{ calculatePeriod.id }}): <br><br>
-</div>
-
 <div class="container" *ngIf="calculatePeriod">
+  Please enter a number of years below (id: {{ calculatePeriod.id }}): <br><br>
   <input type="number" [(ngModel)] = "calculatePeriod.enteredYears" name="calculatePeriod.enteredYears" placeholder="years">
-  <input type="button" value="Calculate" (click)="update()"><br><br>
+  <input type="button" value="Enter" (click)="update()">
+  <input type="button" value="Calculate" (click)="refreshen()"> <br><br>
 </div>
 
 <div class="container" *ngIf="calculatePeriod">
@@ -16,17 +14,15 @@ Please enter a number of years below (id: {{ calculatePeriod.id }}): <br><br>
   Calculated number of {{ calculatePeriod.planet.name }} years: {{ calculatePeriod.calculatedPlanetYears}} <br><br>
 </div>
 
-<div class="container">
+<div class="container" *ngIf="calculatePeriod">
   Please enter a number of days below (id: {{ calculatePeriod.id }}): <br><br>
-  </div>
+  <input type="number" [(ngModel)] = "calculatePeriod.enteredDays" name="calculatePeriod.enteredDays" placeholder="days">
+  <input type="button" value="Enter" (click)="update()">
+  <input type="button" value="Calculate" (click)="refreshen()"> <br><br>
+</div>
   
-  <div class="container" *ngIf="calculatePeriod">
-    <input type="number" [(ngModel)] = "calculatePeriod.enteredDays" name="calculatePeriod.enteredDays" placeholder="days">
-    <input type="button" value="Calculate" (click)="update()"><br><br>
-  </div>
-  
-  <div class="container" *ngIf="calculatePeriod">
-    Entered number of days: {{ calculatePeriod.enteredDays }} Earth days;<br>
-    Calculated number of {{ calculatePeriod.planet.name }} days: {{ calculatePeriod.calculatedPlanetDays }}<br>
-    Calculated number of {{ calculatePeriod.planet.name }} years: {{ calculatePeriod.calculatedPlanetDaysYears}} <br>
-  </div>
+<div class="container" *ngIf="calculatePeriod">
+  Entered number of days: {{ calculatePeriod.enteredDays }} Earth days;<br>
+  Calculated number of {{ calculatePeriod.planet.name }} days: {{ calculatePeriod.calculatedPlanetDays }}<br>
+  Calculated number of {{ calculatePeriod.planet.name }} years: {{ calculatePeriod.calculatedPlanetDaysYears}} <br>
+</div>

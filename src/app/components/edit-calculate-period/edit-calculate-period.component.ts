@@ -33,6 +33,9 @@ export class EditCalculatePeriodComponent implements OnInit {
     this.calculatePeriodService.update(this.calculatePeriod).subscribe(updatedCalculatePeriod => {
       console.log("Updated in Component: "+updatedCalculatePeriod.id);
     });
+  }
+
+  refreshen(): void {
     console.log("Entering findCalculatePeriodById");
     const id = +this.route.snapshot.params["id"];
     

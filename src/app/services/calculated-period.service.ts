@@ -20,7 +20,7 @@ export class CalculatedPeriodService {
   findById(id: Number): Observable<CalculatePeriod> {
     return this.httpClient.get<CalculatePeriod>(`${this.url}/${this.endpoint}/${id}`);
   }
-
+ 
   update(calculatePeriod: CalculatePeriod): Observable<CalculatePeriod>{
     return this.httpClient.put<CalculatePeriod>(`${this.url}/${this.endpoint}/${calculatePeriod.id}`, calculatePeriod);
   }
