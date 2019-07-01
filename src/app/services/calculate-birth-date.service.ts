@@ -24,4 +24,9 @@ export class CalculateBirthDateService {
   update(calculateBirthDate: CalculateBirthDate): Observable<CalculateBirthDate>{
     return this.httpClient.put<CalculateBirthDate>(`${this.url}/${this.endpoint}/${calculateBirthDate.id}`, calculateBirthDate);
   }
+
+  sendBirthDate(id: Number, enteredDate) {
+    console.log("In calculateBirthDateService sendBirthDate function with enteredDate: "+enteredDate)
+    return this.httpClient.put(`${this.url}/${this.endpoint}/${id}`, id, enteredDate);
+  }
 }
